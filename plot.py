@@ -11,6 +11,8 @@ plt.show()
 
 plt.plot([1,2,3,4], [1,4,9,16], 'ro')
 plt.axis([0,6,0,20])
+plt.text(2, 16, r'an equation: $E=mc^2$', fontsize=15)
+plt.annotate('annotate', xy=(2,4), xytext=(1,3), arrowprops=dict(facecolor='black', shrink=0.05))
 plt.show()
 
 
@@ -51,4 +53,8 @@ plt.plot([4,5,6])            # creates a subplot(111) by default
 plt.figure(1)                # figure 1 current; subplot(212) still current
 plt.subplot(211)             # make subplot(211) in figure1 current
 plt.title('Easy as 1,2,3')   # subplot 211 title
+
 plt.show()
+
+
+print np.random.randn(10000)
