@@ -81,9 +81,12 @@ t = np.arange(0.0, 5.0, 0.01)
 s = np.cos(2*np.pi*t)
 line, = plt.plot(t, s, lw=2)
 
+#This method will show local maxima.
 plt.annotate('local maxima', xy=(2, 1), xytext=(3, 1.5),
             arrowprops=dict(facecolor='black', shrink=0.05)
             )
+
+#This method will show local minima.
 plt.annotate('local minima', xy=(2.5, -1), xytext=(3, -1.5),
 			arrowprops=dict(facecolor='black', shrink=0.05)
 			)
