@@ -10,8 +10,16 @@ plt.show()
 
 
 plt.plot([1,2,3,4], [1,4,9,16], 'ro')
+
+plt.suptitle('This is a suptitle', fontsize = 14, fontweight='bold')
+plt.title('This is a title')
+plt.xlabel('xlabel')
+plt.ylabel('ylabel')
+
 plt.axis([0,6,0,20])
-plt.text(2, 16, r'an equation: $E=mc^2$', fontsize=15)
+plt.text(3, 19, 'boxed italics text in data coords', style='italic',
+        bbox={'facecolor':'red', 'alpha':0.5, 'pad':10})
+plt.text(2, 16, r'an equation: $y=x^2$', fontsize=15)
 plt.annotate('annotate', xy=(2,4), xytext=(1,3), arrowprops=dict(facecolor='black', shrink=0.05))
 plt.show()
 
