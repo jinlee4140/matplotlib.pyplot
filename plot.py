@@ -10,16 +10,21 @@ plt.show()
 
 
 plt.plot([1,2,3,4], [1,4,9,16], 'ro')
+plt.axis([0,6,0,20])
 
 plt.suptitle('This is a suptitle', fontsize = 14, fontweight='bold')
 plt.title('This is a title')
 plt.xlabel('xlabel')
 plt.ylabel('ylabel')
 
-plt.axis([0,6,0,20])
+
 plt.text(3, 19, 'boxed italics text in data coords', style='italic',
         bbox={'facecolor':'red', 'alpha':0.5, 'pad':10})
 plt.text(2, 16, r'an equation: $y=x^2$', fontsize=15)
+
+
+
+
 plt.annotate('annotate', xy=(2,4), xytext=(1,3), arrowprops=dict(facecolor='black', shrink=0.05))
 plt.show()
 
@@ -65,4 +70,20 @@ plt.title('Easy as 1,2,3')   # subplot 211 title
 plt.show()
 
 
+
+
+
 print np.random.randn(10000)
+#will be skipping histogram for now.
+
+
+t = np.arange(0.0, 5.0, 0.01)
+s = np.cos(2*np.pi*t)
+line, = plt.plot(t, s, lw=2)
+
+plt.annotate('local maxima', xy=(2, 1), xytext=(3, 1.5),
+            arrowprops=dict(facecolor='black', shrink=0.05),
+            )
+
+plt.ylim(-2,2)
+plt.show()
